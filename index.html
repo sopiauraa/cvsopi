@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css" id="stylesheet">
+
+    <style>
+        body.dark-mode {
+        background: radial-gradient(circle, rgb(89, 93, 101),rgb(99, 120, 149));
+        color: #ffffff;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+<header>
+    <div class="main-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Sopi auraa</a>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#education">Skill</a></li>
+                    <li><a href="#hobi">Hobby</a></li>
+                    <button id="mode">Mode</button>
+                </ul>
+            </nav>
+
+        </div>
+        <section id="hero">
+            <div class="hero-left">
+                <h1 class="hero-name"> Curriculum Vitae <br>
+          </section>
+    </div>
+</header>
+
+
+  <section id ="about">
+    <h1 class="pre-title"> About </h1> <br>
+    <div class="about-container">
+        <div class="circle">
+          <img src="image1.jpg" alt="Gambar">
+        </div>
+        <div class="text">
+          <table>
+            <tr>
+                <th>Name</th>
+                <td>: Sopi Aura Nisa</td>
+              </tr>
+              <tr>
+                <th>Age</th>
+                <td>: 19 years old</td>
+              </tr>
+              <tr>
+                <th>Date of Birth</th>
+                <td>: January, 18, 2005</td>
+              </tr>
+              <tr>
+                <th>Place of Birth</th>
+                <td>: Lubuk pakam</td>
+              </tr>
+              <tr>
+                <th>Address</th>
+                <td>: Jl. Lintas Sumatera, Labuhanbatu Selatan</td>
+              </tr>
+              <tr>
+                <th>Religion</th>
+                <td>: Islam</td>
+              </tr>
+          </table>  
+        </div>
+    </div>
+  </section>
+
+  <section >
+    <div class="grid-container" id="education">
+      <div class="card">
+        <img class="icon" src="school.png" alt="">
+        <div class="content">
+          <p>TK Al-Zaitun</p>
+          <p>SD 114363 Langga Payung</p>
+          <p>Mts Darul Mursyid</p>
+          <p>Mas Darul Mursyid</p>
+          <p>Currently studying at University of North Sumatera (USU)</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="icon" src="skill.svg" alt="">
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>Javascript</p>
+        <p>Microsoft Office (World, XL, & Power Point)</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Hobby -->
+  <section id="hobi">
+    <div class="container-hobi">
+      <h2 class="pre-title">Hobby</h2>
+      <div class="grid-container-hobi">
+        <div class="card-hobi" onmouseover="animateCard(this)">
+          <img class="icon-hobi" src="music.jpg" alt="Music Icon">
+          <h3>Listening to Music</h3>
+          <p>Enjoying different genres of music relaxes my mind and uplifts my mood.</p>
+        </div>
+        <div class="card-hobi" onmouseover="animateCard(this)">
+          <img class="icon-hobi" src="movie.jpg" alt="Movie Icon">
+          <h3>Watching Movies</h3>
+          <p>Exploring various movie genres and immersing myself in captivating stories is my favorite pastime.</p>
+        </div>
+        <div class="card-hobi" onmouseover="animateCard(this)">
+          <img class="icon-hobi" src="book.jpg" alt="Book Icon">
+          <h3>Reading Books</h3>
+          <p>Exploring new worlds and gaining knowledge through books is a delightful pastime.</p>
+        </div>
+        <div class="card-hobi" onmouseover="animateCard(this)">
+          <img class="icon-hobi" src="drawing.jpg" alt="Drawing Icon">
+          <h3>Drawing</h3>
+          <p>Expressing creativity and exploring imagination through drawing brings me joy and fulfillment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="contact-info">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/sopiaur_?igsh=YWZ1YTl6cmp6Zjlu" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><i class="fas fa-envelope"></i> Email: sopiauranisa05@gmail.com</li>
+          <li><i class="fas fa-phone"></i> Phone: 082160502890</li>
+        </ul>
+      </div>
+      <div class="additional-info">
+        <h3>Additional Information</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="#hobi">Hobby</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  
+  
+
+
+    <!-- Animasi Hero -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var heroText = document.querySelector(".hero-name");
+        heroText.style.animation = "fadeIn 1s forwards"; 
+      });
+    </script>
+
+   <script>
+    const modeToggle = document.getElementById('mode');
+    var darkModeEnabled = false;
+    
+    modeToggle.addEventListener('click', function () {
+
+      darkModeEnabled = !darkModeEnabled;
+
+      // Memperbarui tampilan berdasarkan status mode
+      if (darkModeEnabled) {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+    });
+  </script>
+
+</body>
+</html>
